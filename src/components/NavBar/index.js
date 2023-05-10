@@ -2,7 +2,15 @@
 import Link from 'next/link'
 import Logo from '../Logo'
 import { usePathname } from 'next/navigation'
-import { DevToIcon, GithubIcon, LinkedInIcon, TwitterIcon } from '../Icons'
+import {
+  BskyDark,
+  BskyLight,
+  DevToIcon,
+  GithubIcon,
+  LinkedInIcon,
+  TwitterIcon
+} from '../Icons'
+import { motion } from 'framer-motion'
 
 const CustomLink = ({ href, title, className }) => {
   const pathname = usePathname()
@@ -32,22 +40,56 @@ export default function NavBar() {
         <CustomLink href='/projects' title='Projects' className='mx-4' />
         <CustomLink href='/articles' title='Articles' className='ml-4' />
       </nav>
-      <nav>
-        <Link href='/' target='_blank'>
+      <nav className='flex items-center justify-center flex-wrap'>
+        <motion.a
+          href='https://www.linkedin.com/in/ilo-navarro'
+          target='_blank'
+          aria-labelledby='LinkedIn'
+          whileHover={{ y: -2, scale: 1.5 }}
+          whileTap={{ scale: 0.9 }}
+          className='w-6 mr-3'
+        >
           <LinkedInIcon />
-        </Link>
-        <Link href='/' target='_blank'>
+        </motion.a>
+        <motion.a
+          href='https://github.com/ilonavarro'
+          target='_blank'
+          aria-labelledby='github'
+          whileHover={{ y: -2, scale: 1.5 }}
+          whileTap={{ scale: 0.9 }}
+          className='w-6 mx-3'
+        >
           <GithubIcon />
-        </Link>
-        <Link href='/' target='_blank'>
+        </motion.a>
+        <motion.a
+          href='https://dev.to/ilonavarro'
+          target='_blank'
+          aria-labelledby='DevTo'
+          whileHover={{ y: -2, scale: 1.5 }}
+          whileTap={{ scale: 0.9 }}
+          className='w-6 mx-3'
+        >
           <DevToIcon />
-        </Link>
-        <Link href='/' target='_blank'>
+        </motion.a>
+        <motion.a
+          href='/'
+          target='_blank'
+          whileHover={{ y: -2, scale: 1.5 }}
+          whileTap={{ scale: 0.9 }}
+          className='w-6 mx-3'
+        >
           <TwitterIcon />
-        </Link>
-        <Link href='/' target='_blank'>
-          Bsky
-        </Link>
+        </motion.a>
+        <motion.a
+          href='https://staging.bsky.app/profile/ilonavarro.bsky.social'
+          target='_blank'
+          aria-labelledby='Bsky'
+          whileHover={{ y: -2, scale: 1.5 }}
+          whileTap={{ scale: 0.9 }}
+          className='w-6 ml-3'
+        >
+          <BskyLight />
+        </motion.a>
       </nav>
       <div className='absolute left-[50%] top-2 translate-x-[-50%]'>
         <Logo />

@@ -1,3 +1,42 @@
+export const BskyLight = ({ className, ...rest }) => (
+  <svg
+    xmlns='http://www.w3.org/2000/svg'
+    width='1em'
+    height='1em'
+    viewBox='0 0 256 256'
+    fill='none'
+    {...rest}
+    className={`w-full h-auto ${className}`}
+  >
+    <rect width={250} height={250} fill='#075FE5' rx={15} />
+    <path
+      fill='#D9D9D9'
+      fillRule='evenodd'
+      d='M200.183 250H24.924A54.298 54.298 0 0 1 24 240c0-29.823 24.177-54 54-54 10.844 0 20.94 3.196 29.4 8.698C116.78 178.724 134.137 168 154 168c10.844 0 20.941 3.196 29.4 8.698C192.78 160.724 210.137 150 230 150a53.846 53.846 0 0 1 20 3.825V235c0 8.284-6.716 15-15 15h-33.299c-.37-.228-.737-.461-1.101-.698a67.69 67.69 0 0 1-.417.698Z'
+      clipRule='evenodd'
+    />
+  </svg>
+)
+export const BskyDark = ({ className, ...rest }) => (
+  <svg
+    xmlns='http://www.w3.org/2000/svg'
+    width='1em'
+    height='1em'
+    viewBox='0 0 256 256'
+    fill='none'
+    {...rest}
+    className={`w-full h-auto ${className}`}
+  >
+    <rect width={250} height={250} fill='#000' rx={15} />
+    <path
+      fill='#D9D9D9'
+      fillRule='evenodd'
+      d='M200.183 250H24.924A54.298 54.298 0 0 1 24 240c0-29.823 24.177-54 54-54 10.844 0 20.94 3.196 29.4 8.698C116.78 178.724 134.137 168 154 168c10.844 0 20.941 3.196 29.4 8.698C192.78 160.724 210.137 150 230 150a53.846 53.846 0 0 1 20 3.825V235c0 8.284-6.716 15-15 15h-33.299c-.37-.228-.737-.461-1.101-.698a67.69 67.69 0 0 1-.417.698Z'
+      clipRule='evenodd'
+    />
+  </svg>
+)
+
 export const GithubIcon = ({ className, ...rest }) => (
   <svg
     xmlns='http://www.w3.org/2000/svg'
