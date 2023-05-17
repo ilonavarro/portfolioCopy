@@ -3,6 +3,7 @@ import Layout from '@/components/Layout'
 import Image from 'next/image'
 import profilePic from '../../../public/images/profile/ilo.jpg'
 import AnimatedNumbers from '@/components/AnimatedNumbers'
+import Skills from '@/components/Skills'
 
 export const metadata = {
   title: 'About',
@@ -53,6 +54,7 @@ export default function About() {
             <AnimatedNumbers value={3} text={'years of experience'} />
           </div>
         </div>
+        <Skills />
       </Layout>
     </main>
   )
