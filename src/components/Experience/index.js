@@ -12,7 +12,7 @@ export default function Experience() {
   return (
     <div className='my-64'>
       <h2 className='font-bold text-8xl mb-32 w-full text-center'>Experience</h2>
-      <div ref={ref} className='w-[75%] mx-auto relative'>
+      <div ref={ref} className='w-[75%] mx-auto relative '>
         <motion.div
           style={{ scaleY: scrollYProgress }}
           className='absolute left-8 top-0 w-[4px] h-full bg-dark origin-top'
