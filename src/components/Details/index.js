@@ -1,4 +1,5 @@
 import { useRef } from 'react'
+import { motion } from 'framer-motion'
 import LiIcon from '../LiIcon'
 
 export default function Details({ position, company, companyLink, time, address, work }) {
@@ -9,7 +10,11 @@ export default function Details({ position, company, companyLink, time, address,
       className='my-8 first:mt-0 last:mb-0 w-[60%] mx-auto flex flex-col items-center justify-between '
     >
       <LiIcon reference={ref} />
-      <div>
+      <motion.div
+        initial={{ y: 50 }}
+        whileInView={{ y: 0 }}
+        transition={{ duration: 0.5, type: 'spring' }}
+      >
         <h3 className='capitalize font-bold text-2xl '>
           {position}&nbsp;
           <a href={companyLink} target='_blank' className='text-primary capitalize'>
@@ -20,7 +25,7 @@ export default function Details({ position, company, companyLink, time, address,
           {time} | {address}
         </span>
         <p className='font-medium w-full'>{work}</p>
-      </div>
+      </motion.div>
     </li>
   )
 }

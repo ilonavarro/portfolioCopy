@@ -5,6 +5,7 @@ import profilePic from '../../../public/images/profile/ilo.jpg'
 import AnimatedNumbers from '@/components/AnimatedNumbers'
 import Skills from '@/components/Skills'
 import Experience from '@/components/Experience'
+import Education from '@/components/Education'
 
 export const metadata = {
   title: 'About',
@@ -57,6 +58,7 @@ export default function About() {
         </div>
         <Skills />
         <Experience />
+        <Education />
       </Layout>
     </main>
   )

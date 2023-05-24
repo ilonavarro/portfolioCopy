@@ -11,8 +11,8 @@ dependencies:
     specifier: 13.4.3
     version: 13.4.3(eslint@8.41.0)(typescript@5.0.4)
   framer-motion:
-    specifier: ^10.12.12
-    version: 10.12.12(react-dom@18.2.0)(react@18.2.0)
+    specifier: ^10.12.14
+    version: 10.12.14(react-dom@18.2.0)(react@18.2.0)
   next:
     specifier: 13.4.3
     version: 13.4.3(react-dom@18.2.0)(react@18.2.0)
@@ -538,7 +538,7 @@ packages:
     hasBin: true
     dependencies:
       caniuse-lite: 1.0.30001489
-      electron-to-chromium: 1.4.403
+      electron-to-chromium: 1.4.405
       node-releases: 2.0.11
       update-browserslist-db: 1.0.11(browserslist@4.21.5)
     dev: false
@@ -754,8 +754,8 @@ packages:
       esutils: 2.0.3
     dev: false
 
-  /electron-to-chromium@1.4.403:
-    resolution: {integrity: sha512-evCMqXJWmbQHdlh307peXNguqVIMmcLGrQwXiR+Qc98js8jPDeT9rse1+EF2YRjWgueuzj1r4WWLAe4/U+xjMg==}
+  /electron-to-chromium@1.4.405:
+    resolution: {integrity: sha512-JdDgnwU69FMZURoesf9gNOej2Cms1XJFfLk24y1IBtnAdhTcJY/mXnokmpmxHN59PcykBP4bgUU98vLY44Lhuw==}
     dev: false
 
   /emoji-regex@9.2.2:
@@ -1235,8 +1235,8 @@ packages:
     resolution: {integrity: sha512-MhLuK+2gUcnZe8ZHlaaINnQLl0xRIGRfcGk2yl8xoQAfHrSsL3rYu6FCmBdkdbhc9EPlwyGHewaRsvwRMJtAlA==}
     dev: false
 
-  /framer-motion@10.12.12(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-DDCqp60U6hR7aUrXj/BXc/t0Sd/U4ep6w/NZQkw898K+u7s+Vv/P8yxq4WTNA86kU9QCsqOgn1Qhz2DpYK0Oag==}
+  /framer-motion@10.12.14(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-fOl7yuJJyI5Ed7OT/ZieQefhCDFklfvKyIiXFm3TGcLKx0pUBtfRycAdHguAuCNtW/+hq0Mtp82XMVWFifY9Eg==}
     peerDependencies:
       react: ^18.0.0
       react-dom: ^18.0.0
@@ -2137,7 +2137,7 @@ packages:
     dependencies:
       lilconfig: 2.1.0
       postcss: 8.4.23
-      yaml: 2.2.2
+      yaml: 2.3.0
     dev: false
 
   /postcss-nested@6.0.1(postcss@8.4.23):
@@ -2701,9 +2701,9 @@ packages:
     resolution: {integrity: sha512-3wdGidZyq5PB084XLES5TpOSRA3wjXAlIWMhum2kRcv/41Sn2emQ0dycQW4uZXLejwKvg6EsvbdlVL+FYEct7A==}
     dev: false
 
-  /yaml@2.2.2:
-    resolution: {integrity: sha512-CBKFWExMn46Foo4cldiChEzn7S7SRV+wqiluAb6xmueD/fGyRHIhX8m14vVGgeFWjN540nKCNVj6P21eQjgTuA==}
-    engines: {node: '>= 14'}
+  /yaml@2.3.0:
+    resolution: {integrity: sha512-8/1wgzdKc7bc9E6my5wZjmdavHLvO/QOmLG1FBugblEvY4IXrLjlViIOmL24HthU042lWTDRO90Fz1Yp66UnMw==}
+    engines: {node: '>= 14', npm: '>= 7'}
     dev: false
 
   /yocto-queue@0.1.0:
