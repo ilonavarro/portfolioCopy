@@ -68,7 +68,7 @@ const Project = ({ title, type, img, link, github, summary }) => {
         <Link href={link} target='_blank' className='hover:underline underline-offset-2'>
           <h2 className='my-2 w-full text-left text-3xl font-bold'>{title}</h2>
         </Link>
-        <p className='my-2 font-medium text-dark text-sm'>{summary}</p>
+        {summary && <p className='my-2 font-medium text-dark text-sm'>{summary}</p>}
         <div className='w-full mt-2 flex items-center justify-between'>
           <Link href={link} target='_blank' className='text-lg font-semibold underline'>
             Visit
@@ -100,7 +100,7 @@ local currency.'
               github='https://github.com/ilonavarro'
             />
           </div>
-          <div className='col-span-4'>
+          <div className='col-span-6'>
             <Project
               type='Website Design'
               title='Crypto Screener Application'
@@ -113,19 +113,7 @@ local currency.'
             />
           </div>
 
-          <div className='col-span-4'>
-            <Project
-              type='Website Design'
-              title='Crypto Screener Application'
-              summary='A feature-rich Crypto Screener App using React, Tailwind CSS, Context API, React Router and Recharts. 
-It shows detail regarding almost all the cryptocurrency. You can easily convert the price in your 
-local currency.'
-              img={project1}
-              link='/'
-              github='https://github.com/ilonavarro'
-            />
-          </div>
-          <div className='col-span-4'>
+          <div className='col-span-6'>
             <Project
               type='Website Design'
               title='Crypto Screener Application'
@@ -168,9 +156,9 @@ local currency.'
             <Project
               type='Website Design'
               title='Crypto Screener Application'
-              summary='A feature-rich Crypto Screener App using React, Tailwind CSS, Context API, React Router and Recharts. 
-It shows detail regarding almost all the cryptocurrency. You can easily convert the price in your 
-local currency.'
+              //               summary='A feature-rich Crypto Screener App using React, Tailwind CSS, Context API, React Router and Recharts.
+              // It shows detail regarding almost all the cryptocurrency. You can easily convert the price in your
+              // local currency.'
               img={project1}
               link='/'
               github='https://github.com/ilonavarro'
