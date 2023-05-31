@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { AnimatedImage, MovingImg } from '../AnimatedImage'
+import { AnimatedLi } from './AnimatedLi'
 
 export function FeaturedArticle({ img, title, time, summary, link, priority }) {
   return (
@@ -38,14 +39,9 @@ export function FeaturedArticle({ img, title, time, summary, link, priority }) {
 
 export function Article({ img, title, date, link }) {
   return (
-    <li
-      className='relative w-full p-4 py-6 my-4 rounded-xl flex items-center
-    justify-between bg-light text-dark first:mt-0 border border-solid border-dark
-    border-r-4 border-b-4
-    '
-    >
+    <AnimatedLi>
       <MovingImg title={title} img={img} link={link} />
       <span className='text-primary font-semibold pl-4'>{date}</span>
-    </li>
+    </AnimatedLi>
   )
 }
