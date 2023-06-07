@@ -1,9 +1,30 @@
 'use client'
-import handleSubmit from './handleSubmit'
+
+async function formSubmit(event) {
+  // event.preventDefault()
+
+  const formData = new FormData(event.target)
+  const object = Object.fromEntries(formData)
+  const json = JSON.stringify(object)
+
+  const response = await fetch('/api/contact', {
+    method: 'POST',
+    headers: {
+      // 'Content-Type': 'application/json',
+      Accept: 'application/json'
+    },
+    body: json
+  })
+  const result = await response.json()
+  if (result.success) {
+    console.log('success!', result)
+    // clearForm(event)
+  }
+}
 
 export default function Form() {
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={formSubmit}>
       <div className='w-full flex flex-col pb-4'>
         <label
           htmlFor='name'
@@ -33,6 +54,7 @@ export default function Form() {
             placeholder='Your Name'
             required
             autoComplete='off'
+            content='Teste'
             // class='bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500'
             className='border border-dark bg-light text-dark text-sm rounded-lg 
       block w-full pl-10 p-2.5'
@@ -95,15 +117,26 @@ export default function Form() {
           />
         </div>
       </div>
-
-      <button
-        type='submit'
-        className='w-full bg-dark text-light p-2.5 px-6 rounded-lg text-lg font-semibold 
+      <div className='flex flex-col justify-between mt-4 gap-4'>
+        <button
+          type='submit'
+          className='w-full bg-dark text-light p-2.5 px-6 rounded-lg text-lg font-semibold 
       border-2 border-solid border-transparent
-      hover:bg-light hover:text-dark hover:border-dark '
-      >
-        Send
-      </button>
+      hover:bg-light hover:text-dark hover:border-dark
+      focus:border-pink-700 focus:bg-dark/80'
+        >
+          Send
+        </button>
+        <button
+          type='reset'
+          className='w-full bg-dark/90 text-light p-2.5 px-6 rounded-lg text-lg font-semibold 
+      border-2 border-solid border-transparent
+      hover:bg-red-800 hover:text-light hover:border-dark/80
+      focus:border-dark/80 focus:bg-red-800'
+        >
+          Clear
+        </button>
+      </div>
     </form>
   )
 }
