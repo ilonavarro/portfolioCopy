@@ -39,5 +39,9 @@ export default function useThemeSwitcher() {
     return () => mediaQuery.removeEventListener('change', handleChange)
   }, [])
 
+  useEffect(() => {
+    // fazendo
+  }, [mode])
+
   return <div>useThemeSwitcher</div>
 }
