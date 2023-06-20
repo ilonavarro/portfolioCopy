@@ -8,9 +8,12 @@ import {
   DevToIcon,
   GithubIcon,
   LinkedInIcon,
+  MoonIcon,
+  SunIcon,
   TwitterIcon
 } from '../Icons'
 import { motion } from 'framer-motion'
+import useThemeSwitcher from '../hooks/useThemeSwitcher'
 
 const CustomLink = ({ href, title, className }) => {
   const pathname = usePathname()
@@ -32,6 +35,8 @@ const CustomLink = ({ href, title, className }) => {
 }
 
 export default function NavBar() {
+  const [mode, setMode] = useThemeSwitcher()
+
   return (
     <header className='w-full px-32 py-8 font-medium flex items-center justify-between'>
       <nav>
@@ -89,8 +94,21 @@ export default function NavBar() {
           whileTap={{ scale: 0.9 }}
           className='w-6 ml-3'
         >
-          <BskyLight />
+          {mode === 'dark' ? <BskyDark /> : <BskyLight />}
         </motion.a>
+
+        <motion.button
+          whileHover={{ y: -2, scale: 1.5 }}
+          whileTap={{ scale: 0.9 }}
+          onClick={() => setMode(mode === 'dark' ? 'light' : 'dark')}
+          className='w-6 ml-3'
+        >
+          {mode === 'dark' ? (
+            <SunIcon className={'fill-dark'} />
+          ) : (
+            <MoonIcon className={'fill-dark'} />
+          )}
+        </motion.button>
       </nav>
       <div className='absolute left-[50%] top-2 translate-x-[-50%]'>
         <Logo />
