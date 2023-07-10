@@ -6,7 +6,8 @@ export default function Skill({ text, x, y, tooltip = '✨ You hover me!' }) {
     <>
       <motion.div
         className='group flex items-center justify-center rounded-full font-semibold bg-dark text-light py-3 px-6 shadow-dark 
-        cursor-grab absolute'
+        cursor-grab absolute
+        dark:bg-light dark:text-dark'
         whileHover={{
           scale: 1.05,
           textShadow: '0px 0px 4px rgb(44, 215, 254)',
@@ -19,8 +20,9 @@ export default function Skill({ text, x, y, tooltip = '✨ You hover me!' }) {
       >
         {text}
         <span
-          className='absolute top-10 scale-0 transition-all rounded-full bg-light  p-2 text-xs text-dark group-hover:scale-100 
-        text-center border-dark border-2'
+          className='absolute top-10 scale-0 transition-all rounded-full bg-light p-2 text-xs text-dark group-hover:scale-100 
+        text-center border-dark border-2
+        dark:bg-dark dark:text-light dark:border-light'
         >
           {tooltip}
         </span>

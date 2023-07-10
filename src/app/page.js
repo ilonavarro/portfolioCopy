@@ -8,7 +8,10 @@ import LightBulb from '../../public/images/svg/miscellaneous_icons_1.svg'
 
 export default function Home() {
   return (
-    <main className='flex items-center text-dark w-full min-h-screen'>
+    <main
+      className='flex items-center text-dark w-full min-h-screen
+    dark:text-light'
+    >
       <Layout className='pt-0'>
         <div className='flex items-center justify-between w-full'>
           <div className='w-1/2'>
@@ -33,13 +36,15 @@ export default function Home() {
                 href='#'
                 className='flex items-center bg-dark text-light p-2.5 px-6 rounded-lg text-lg font-semibold 
                 border-2 border-solid border-transparent
-                hover:bg-light hover:text-dark hover:border-dark '
+                hover:bg-light hover:text-dark hover:border-dark
+                dark:bg-light dark:text-dark dark:hover:bg-dark dark:hover:text-light dark:hover:border-light'
               >
                 My Resume
               </Link>
               <Link
                 href='/contact'
-                className='ml-4 text-lg font-medium capitalize text-dark underline'
+                className='ml-4 text-lg font-medium capitalize text-dark underline hover:font-semibold
+                dark:text-light '
               >
                 Contact me
               </Link>

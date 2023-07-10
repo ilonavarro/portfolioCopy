@@ -4,7 +4,10 @@ export default function Skills() {
   return (
     <>
       <h2 className='font-bold text-8xl mt-64 w-full text-center'>Skills</h2>
-      <div className='w-full h-screen relative flex items-center justify-center rounded-full bg-circularLight'>
+      <div
+        className='w-full h-screen relative flex items-center justify-center rounded-full bg-circularLight
+      dark:bg-circularDark'
+      >
         <Skill x='0vw' y='-22vw' text='Figma' tooltip='Used to create designs' />
         <Skill x='-22vw' y='-15vw' text='Next JS' tooltip='React Framework' />
         <Skill x='0vw' y='-11vw' text='CSS' tooltip='CSS3 - Cascading Style Sheets' />

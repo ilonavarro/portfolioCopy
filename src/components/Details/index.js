@@ -17,11 +17,15 @@ export default function Details({ position, company, companyLink, time, address,
       >
         <h3 className='capitalize font-bold text-2xl '>
           {position}&nbsp;
-          <a href={companyLink} target='_blank' className='text-primary capitalize'>
+          <a
+            href={companyLink}
+            target='_blank'
+            className='text-primary capitalize hover:text-dark/75 dark:text-primaryDark dark:hover:text-light/75'
+          >
             @{company}
           </a>
         </h3>
-        <span className='capitalize font-medium text-dark/75'>
+        <span className='capitalize font-medium text-dark/75 dark:text-light/75'>
           {time} | {address}
         </span>
         <p className='font-medium w-full'>{work}</p>

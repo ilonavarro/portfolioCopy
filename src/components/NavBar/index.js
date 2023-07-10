@@ -3,8 +3,7 @@ import Link from 'next/link'
 import Logo from '../Logo'
 import { usePathname } from 'next/navigation'
 import {
-  BskyDark,
-  BskyLight,
+  Bsky,
   DevToIcon,
   GithubIcon,
   LinkedInIcon,
@@ -26,6 +25,7 @@ const CustomLink = ({ href, title, className }) => {
         absolute left-0 -bottom-0.5 
         group-hover:w-full transition-[width] ease duration-300
         ${pathname === href ? 'w-full' : 'w-0'}
+        dark:bg-light
         `}
       >
         &nbsp;
@@ -38,7 +38,10 @@ export default function NavBar() {
   const [mode, setMode] = useThemeSwitcher()
 
   return (
-    <header className='w-full px-32 py-8 font-medium flex items-center justify-between'>
+    <header
+      className='w-full px-32 py-8 font-medium flex items-center justify-between
+    dark:text-light '
+    >
       <nav>
         <CustomLink href='/' title='Home' className='mr-4' />
         <CustomLink href='/about' title='About' className='mx-4' />
@@ -53,9 +56,9 @@ export default function NavBar() {
           aria-labelledby='LinkedIn'
           whileHover={{ y: -2, scale: 1.5 }}
           whileTap={{ scale: 0.9 }}
-          className='w-6 mr-3'
+          className='w-6 mr-3 bg-light rounded'
         >
-          <LinkedInIcon />
+          {mode === 'dark' ? <LinkedInIcon fill='#000000' /> : <LinkedInIcon />}
         </motion.a>
         <motion.a
           href='https://github.com/ilonavarro'
@@ -63,9 +66,9 @@ export default function NavBar() {
           aria-labelledby='github'
           whileHover={{ y: -2, scale: 1.5 }}
           whileTap={{ scale: 0.9 }}
-          className='w-6 mx-3'
+          className='w-6 mx-3 bg-light rounded'
         >
-          <GithubIcon />
+          {mode === 'dark' ? <GithubIcon /> : <GithubIcon />}
         </motion.a>
         <motion.a
           href='https://dev.to/ilonavarro'
@@ -82,9 +85,9 @@ export default function NavBar() {
           target='_blank'
           whileHover={{ y: -2, scale: 1.5 }}
           whileTap={{ scale: 0.9 }}
-          className='w-6 mx-3'
+          className='w-6 mx-3 bg-light rounded'
         >
-          <TwitterIcon />
+          {mode === 'dark' ? <TwitterIcon fill='#1b1b1b' /> : <TwitterIcon />}
         </motion.a>
         <motion.a
           href='https://staging.bsky.app/profile/ilonavarro.bsky.social'
@@ -94,14 +97,15 @@ export default function NavBar() {
           whileTap={{ scale: 0.9 }}
           className='w-6 ml-3'
         >
-          {mode === 'dark' ? <BskyDark /> : <BskyLight />}
+          {mode === 'dark' ? <Bsky fill='#000000' /> : <Bsky />}
         </motion.a>
 
         <motion.button
           whileHover={{ y: -2, scale: 1.5 }}
           whileTap={{ scale: 0.9 }}
           onClick={() => setMode(mode === 'dark' ? 'light' : 'dark')}
-          className='w-6 ml-3'
+          className={`w-6 ml-4 flex items-center justify-center rounded-full
+          /*${mode === 'light' ? 'bg-dark text-light' : 'bg-light text-dark'}*/`}
         >
           {mode === 'dark' ? (
             <SunIcon className={'fill-dark'} />

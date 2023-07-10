@@ -24,7 +24,9 @@ export default function AnimatedNumbers({ value, text }) {
       <span className='inline-block text-7xl font-bold'>
         <span ref={ref}>{value}</span>+
       </span>
-      <h2 className='text-xl font-medium capitalize text-dark/75'>{text}</h2>
+      <h2 className='text-xl font-medium capitalize text-dark/75 dark:text-light/75'>
+        {text}
+      </h2>
     </div>
   )
 }

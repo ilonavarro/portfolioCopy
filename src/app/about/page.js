@@ -14,12 +14,17 @@ export const metadata = {
 
 export default function About() {
   return (
-    <main className='flex w-full flex-col items-center justify-center'>
+    <main
+      className='flex w-full flex-col items-center justify-center
+    dark:text-light'
+    >
       <Layout className='pt-16'>
         <AnimatedText className='mb-16'>Passion Fuels Purpose!</AnimatedText>
         <div className='grid w-full grid-cols-8 gap-16'>
           <div className='col-span-3 flex flex-col items-start justify-start'>
-            <h2 className='mb-4 text-lg font-bold uppercase text-dark/75'>Biography</h2>
+            <h2 className='mb-4 text-lg font-bold uppercase text-dark/75 dark:text-light/75'>
+              Biography
+            </h2>
             <p className='font-medium'>
               Hi, I&apos;m Ilo Navarro, a web developer and UI/UX designer with a passion
               for creating beautiful, functional, and user-centered digital experiences.
@@ -40,9 +45,13 @@ export default function About() {
           </div>
           <div
             className='col-span-3 relative h-max rounded-2xl border-2 border-solid border-dark
-          bg-light p-8'
+          bg-light p-8
+          dark:border-light dark:bg-dark'
           >
-            <div className='absolute top-0 -right-3 -z-10 w-[102%] h-[103%] rounded-[2rem] bg-dark' />
+            <div
+              className='absolute top-0 -right-3 -z-10 w-[102%] h-[103%] rounded-[2rem] bg-dark
+            dark:bg-light'
+            />
             <Image
               src={profilePic}
               alt='Ilo Navarro'
@@ -56,7 +65,7 @@ export default function About() {
             <AnimatedNumbers value={3} text={'years of experience'} />
           </div>
         </div>
-        <Skills />
+        <Skills className='bg-black' />
         <Experience />
         <Education />
       </Layout>
