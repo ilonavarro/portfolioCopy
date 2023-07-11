@@ -25,11 +25,11 @@ async function formSubmit(event) {
 export default function Form() {
   return (
     <form onSubmit={formSubmit}>
-      <div className='w-full flex flex-col pb-4'>
+      <div className='w-full flex flex-col pb-4 text-dark dark:text-light'>
         <label
           htmlFor='name'
           // class='block mb-2 text-sm font-medium text-gray-900 dark:text-white'
-          className='block mb-1 text-dark'
+          className='block mb-1'
         >
           Name
         </label>
@@ -55,6 +55,7 @@ export default function Form() {
             required
             autoComplete='off'
             content='Teste'
+            autoFocus
             // class='bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500'
             className='border border-dark bg-light text-dark text-sm rounded-lg 
       block w-full pl-10 p-2.5'
@@ -63,7 +64,7 @@ export default function Form() {
         <label
           htmlFor='email'
           // class='block mb-2 text-sm font-medium text-gray-900 dark:text-white'
-          className='block mb-1 mt-4 text-dark'
+          className='block mb-1 mt-4'
         >
           Email
         </label>
@@ -98,7 +99,7 @@ export default function Form() {
         <label
           htmlFor='message'
           // class='block mb-2 text-sm font-medium text-gray-900 dark:text-white'
-          className='block mb-1 mt-4 text-dark'
+          className='block mb-1 mt-4'
         >
           How can I create value for you?
         </label>
@@ -123,7 +124,9 @@ export default function Form() {
           className='w-full bg-dark text-light p-2.5 px-6 rounded-lg text-lg font-semibold 
       border-2 border-solid border-transparent
       hover:bg-light hover:text-dark hover:border-dark
-      focus:border-pink-700 focus:bg-dark/80'
+      focus:border-pink-700 focus:bg-dark/80
+      dark:text-dark dark:bg-light
+      dark:hover:bg-dark dark:hover:text-light dark:hover:border-light/80 dark:focus:bg-dark/80'
         >
           Send
         </button>
@@ -132,7 +135,9 @@ export default function Form() {
           className='w-full bg-dark/90 text-light p-2.5 px-6 rounded-lg text-lg font-semibold 
       border-2 border-solid border-transparent
       hover:bg-red-800 hover:text-light hover:border-dark/80
-      focus:border-dark/80 focus:bg-red-800'
+      focus:border-dark/80 focus:bg-red-800/70
+      dark:text-dark dark:bg-light/80
+      dark:hover:bg-red-800 dark:hover:text-light dark:hover:border-light/80 dark:focus:bg-red-800/70'
         >
           Clear
         </button>

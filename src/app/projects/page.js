@@ -10,7 +10,7 @@ export const metadata = {
 
 export default function Projects() {
   return (
-    <main className='w-full mb-16 flex flex-col items-center justify-center'>
+    <main className='w-full mb-16 flex flex-col items-center justify-center dark:text-light'>
       <Layout className='pt-16'>
         <AnimatedText className='mb-16'>Imagination Trumps Knowledge!</AnimatedText>
         <div className='grid grid-cols-12 gap-24 gap-y-32'>

@@ -10,7 +10,10 @@ export const metadata = {
 
 export default function Articles() {
   return (
-    <main className='w-full mb-16 flex flex-col items-center justify-center overflow-hidden'>
+    <main
+      className='w-full mb-16 flex flex-col items-center justify-center overflow-hidden
+    dark:text-light'
+    >
       <Layout className='pt-16'>
         <AnimatedText className='mb-16'>Words Can Change The World!</AnimatedText>
         <ul className='grid grid-cols-2 gap-16'>

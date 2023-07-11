@@ -66,7 +66,7 @@ export default function NavBar() {
           aria-labelledby='github'
           whileHover={{ y: -2, scale: 1.5 }}
           whileTap={{ scale: 0.9 }}
-          className='w-6 mx-3 bg-light rounded'
+          className='w-6 mx-3'
         >
           {mode === 'dark' ? <GithubIcon /> : <GithubIcon />}
         </motion.a>
