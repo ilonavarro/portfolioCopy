@@ -1,6 +1,7 @@
 import Layout from '@/components/Layout'
 import Image from 'next/image'
 import profilePic from '../../public/images/profile/developer-pic-1.png'
+import devDesignPic from '../../public/images/profile/development-design.png'
 import AnimatedText from '@/components/AnimatedText'
 import Link from 'next/link'
 import HireMe from '@/components/HireMe'
@@ -14,12 +15,13 @@ export default function Home() {
     >
       <Layout className='pt-0'>
         <div className='flex items-center justify-between w-full'>
-          <div className='w-1/2'>
+          <div className='w-[40%] ml-20'>
             <Image
-              src={profilePic}
+              src={devDesignPic}
               alt='Ilo Dev'
-              className='w-full h-auto'
+              className='w-full h-auto rounded-3xl opacity-90'
               priority={true}
+              sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw'
             />
           </div>
           <div className='w-1/2 flex flex-col items-center self-center'>

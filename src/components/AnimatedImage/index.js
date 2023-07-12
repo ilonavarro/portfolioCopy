@@ -22,6 +22,7 @@ export function AnimatedImage({
       priority={priority}
       whileHover={{ scale: scaleNumber }}
       transition={{ duration: durationNumber }}
+      sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw'
     />
   )
 }
@@ -59,6 +60,7 @@ export function MovingImg({ title, img, link }) {
         alt={title}
         className='w-96 h-auto hidden absolute rounded-lg z-10'
         priority={false}
+        sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
       />
     </Link>
   )
