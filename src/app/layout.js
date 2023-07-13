@@ -42,8 +42,8 @@ export default function RootLayout({ children }) {
   return (
     <html lang='en' suppressHydrationWarning>
       <body
-        className={`${montserrat.variable} font-mont bg-light w-full min-h-screen
-      dark:bg-dark `}
+        className={`${montserrat.variable} font-mont bg-light w-full min-h-screen xl:p-24 lg:p-16 md:p-12 sm:p-8
+      dark:bg-dark`}
       >
         <script
           id='theme-switcher'
