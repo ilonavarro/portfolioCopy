@@ -5,9 +5,11 @@ export default function Skill({ text, x, y, tooltip = '✨ You hover me!' }) {
   return (
     <>
       <motion.div
-        className='group flex items-center justify-center rounded-full font-semibold bg-dark text-light py-3 px-6 shadow-dark 
+        className='flex items-center justify-center rounded-full font-semibold bg-dark text-light py-3 px-6 shadow-dark 
         cursor-grab absolute
-        dark:bg-light dark:text-dark'
+        dark:bg-light dark:text-dark
+        lg:py-2 lg:px-4 md:text-sm md:py-1.5 md:px-3 xs:bg-transparent xs:dark:bg-transparent xs:text-dark
+        xs:dark:text-light xs:font-bold'
         whileHover={{
           scale: 1.05,
           textShadow: '0px 0px 4px rgb(44, 215, 254)',
